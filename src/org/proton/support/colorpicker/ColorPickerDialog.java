@@ -15,7 +15,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.support.colorpicker;
+package org.proton.support.colorpicker;
 
 import android.app.AlertDialog;
 import android.app.NotificationManager;
@@ -31,7 +31,7 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 
-import org.aospextended.support.R;
+import org.proton.support.R;
 
 public class ColorPickerDialog extends AlertDialog implements ColorPickerView.OnColorChangedListener, View.OnClickListener {
 

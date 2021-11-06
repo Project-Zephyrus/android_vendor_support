@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.support.preference;
+package org.proton.support.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;

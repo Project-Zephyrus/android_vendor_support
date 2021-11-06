@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2016-2019 crDroid Android Project
+ * Copyright (C) 2017 AICP
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,33 +14,28 @@
  * limitations under the License.
  */
 
-package org.aospextended.support.preference;
+package org.proton.support.preference;
 
 import android.content.Context;
 import android.util.AttributeSet;
 
-public class SystemSettingSeekBarPreference extends CustomSeekBarPreference {
+import org.proton.support.preference.SystemSettingsStore;
 
-    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs, int defStyle) {
+public class SystemSettingMasterSwitchPreference extends MasterSwitchPreference {
+
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingSeekBarPreference(Context context, AttributeSet attrs) {
+    public SystemSettingMasterSwitchPreference(Context context, AttributeSet attrs) {
         super(context, attrs);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    public SystemSettingSeekBarPreference(Context context) {
-        super(context, null);
+    public SystemSettingMasterSwitchPreference(Context context) {
+        super(context);
         setPreferenceDataStore(new SystemSettingsStore(context.getContentResolver()));
     }
 
-    @Override
-    protected void onSetInitialValue(boolean restoreValue, Object defaultValue) {
-        if (defaultValue == null) {
-            defaultValue = 0;
-        }
-        setValue(restoreValue ? getPersistedInt((Integer) defaultValue) : (Integer) defaultValue);
-    }
 }

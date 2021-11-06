@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.aospextended.support.colorpicker;
+package org.proton.support.colorpicker;
 
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.Config;
